@@ -1,0 +1,611 @@
+/* =====================================================
+   ADAPTIVE.CSS
+   Підключати ПІСЛЯ style.css (і news.css / portfolio.css,
+   якщо вони є на сторінці).
+   Брейкпоінти: 1450px (малий десктоп) → 1024px (планшет)
+                → 768px (великий мобільний) → 480px (мобільний)
+   ===================================================== */
+
+/* ---------- Бургер-кнопка: базові стилі (видима лише на мобільному) ---------- */
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    float: right;
+    margin-top: 14px;
+    position: relative;
+    z-index: 20;
+    padding: 0;
+}
+
+.burger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    border-radius: 3px;
+    background: #fff;
+    transition: all 300ms ease;
+}
+
+.burger.open span:nth-child(1) {
+    transform: translateY(9.5px) rotate(45deg);
+}
+
+.burger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.open span:nth-child(3) {
+    transform: translateY(-9.5px) rotate(-45deg);
+}
+
+/* =====================================================
+   1. МАЛИЙ ДЕСКТОП / НОУТБУК  (≤ 1450px)
+   ===================================================== */
+@media (max-width: 1450px) {
+    .container {
+        width: 92%;
+    }
+
+    .hero img {
+        width: 38%;
+        top: -90px;
+    }
+
+    .banner p {
+        width: 100%;
+    }
+
+    .email .block p {
+        width: 60%;
+    }
+
+    .email .block input {
+        width: 320px;
+        right: 0;
+    }
+
+    .feedback form p {
+        width: 80%;
+    }
+}
+
+/* =====================================================
+   2. ПЛАНШЕТ  (≤ 1024px)
+   ===================================================== */
+@media (max-width: 1024px) {
+    .container {
+        width: 90%;
+    }
+
+    /* --- Header --- */
+    header nav {
+        width: auto;
+    }
+
+    /* --- Index: hero --- */
+    .hero {
+        padding-bottom: 60px;
+    }
+
+    .hero.container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero--info {
+        width: 100%;
+        padding-top: 30px;
+    }
+
+    .hero img {
+        position: relative;
+        top: 0;
+        right: 0;
+        display: block;
+        margin: 20px auto 0 auto;
+        width: 55%;
+    }
+
+    /* --- Index: trending games --- */
+    .trending .games {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .trending .games .block {
+        width: 45%;
+    }
+
+    .big-text {
+        width: 100%;
+        font-size: 28px;
+    }
+
+    /* --- Index: banner --- */
+    .banner {
+        padding: 50px 0;
+    }
+
+    /* --- Index: features --- */
+    .features .info .block {
+        width: 30%;
+    }
+
+    /* --- Index: projects --- */
+    .projects .images {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .projects .images img {
+        width: 31%;
+    }
+
+    /* --- Index: email subscribe --- */
+    .email .block {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+        padding: 35px 5%;
+    }
+
+    .email .block p {
+        width: 100%;
+    }
+
+    .email .block input {
+        right: 0;
+        width: 60%;
+    }
+
+    .email .block div:last-child {
+        display: flex;
+        width: 100%;
+    }
+
+    /* --- About --- */
+    .hero-about.container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-about .info {
+        width: 100%;
+        padding: 60px 0 20px 0;
+    }
+
+    .hero-about img {
+        position: relative;
+        right: 0;
+        top: 0;
+        width: 70%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .work .blocks {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .work .blocks .block {
+        width: 47%;
+    }
+
+    /* --- Contacts --- */
+    .feedback form p {
+        width: 100%;
+    }
+
+    /* --- Portfolio / Services --- */
+    .stats {
+        flex-wrap: wrap;
+        gap: 25px;
+        padding: 30px 5%;
+    }
+
+    .stats-item {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .stats-item.divider {
+        border-left: 0;
+        border-right: 0;
+        border-top: 2px solid #2C2420;
+        border-bottom: 2px solid #2C2420;
+        padding: 20px 0;
+    }
+
+    .video-section.container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .video-wrapper,
+    .video-info {
+        width: 100%;
+    }
+
+    .service-row,
+    .service-row.reverse {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .row-text,
+    .row-image {
+        width: 100%;
+    }
+
+    .reviews-grid {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .review-card {
+        width: 47%;
+    }
+
+    /* --- News --- */
+    .news-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .subscribe-box {
+        padding: 30px;
+    }
+}
+
+/* =====================================================
+   3. ВЕЛИКИЙ МОБІЛЬНИЙ / МАЛИЙ ПЛАНШЕТ (≤ 768px)
+   Бургер-меню активується тут
+   ===================================================== */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    header {
+        padding: 25px 0;
+        position: relative;
+    }
+
+    header .logo {
+        font-size: 24px;
+    }
+
+    /* --- Бургер показуємо, ховаємо звичайне меню --- */
+    .burger {
+        display: flex;
+    }
+
+    header nav {
+        display: none;
+        width: 100%;
+        float: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #150D08;
+        border-radius: 10px;
+        padding: 10px 0;
+        z-index: 15;
+    }
+
+    header nav.open {
+        display: block;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 20px 25px;
+    }
+
+    header nav ul li {
+        width: 100%;
+    }
+
+    header nav ul li.active::after {
+        top: 6px;
+        left: 0;
+    }
+
+    header nav ul li.btn {
+        margin-top: 5px;
+    }
+
+    header nav ul li.btn a {
+        display: inline-block;
+    }
+
+    /* --- Index --- */
+    .hero--info h1 {
+        font-size: 36px;
+    }
+
+    .trending .games .block {
+        width: 100%;
+    }
+
+    .trending .see-all {
+        float: none;
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+
+    .trending h3 {
+        font-size: 24px;
+    }
+
+    .features .info .block {
+        width: 47%;
+    }
+
+    .projects .images img {
+        width: 100%;
+    }
+
+    .projects .images {
+        flex-direction: column;
+    }
+
+    .projects .see-all {
+        float: none;
+    }
+
+    /* --- About --- */
+    .hero-about .info h1 {
+        font-size: 26px;
+    }
+
+    .work .blocks .block {
+        width: 100%;
+    }
+
+    /* --- Contacts --- */
+    .hero-contacts h1 {
+        font-size: 26px;
+        margin-top: 40px;
+    }
+
+    .hero-contacts img {
+        width: 100%;
+        margin: 40px 0;
+    }
+
+    .feedback form .inline {
+        flex-direction: column;
+    }
+
+    .feedback form .inline > div {
+        width: 100%;
+    }
+
+    /* --- Portfolio --- */
+    .services-hero h1 {
+        font-size: 26px;
+    }
+
+    .review-card {
+        width: 100%;
+    }
+
+    .testimonials-controls {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* --- News --- */
+    .news-hero h1 {
+        font-size: 26px;
+    }
+
+    .news-side-item {
+        grid-template-columns: 110px 1fr;
+    }
+
+    .news-side-item img {
+        width: 110px;
+        height: 100px;
+    }
+
+    .featured-article img {
+        height: 220px;
+    }
+
+    .featured-article h2 {
+        font-size: 21px;
+    }
+
+    /* --- Footer --- */
+    footer .blocks {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    footer .blocks p {
+        width: 100%;
+    }
+
+    /* --- Subscribe boxes (news/portfolio) --- */
+    .subscribe-box {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .subscribe-text,
+    .subscribe-form {
+        width: 100%;
+    }
+}
+
+/* =====================================================
+   4. МОБІЛЬНИЙ (≤ 480px)
+   ===================================================== */
+@media (max-width: 480px) {
+    .container {
+        width: 92%;
+    }
+
+    header {
+        padding: 20px 0;
+    }
+
+    header .logo {
+        font-size: 20px;
+    }
+
+    /* --- Index hero --- */
+    .hero--info h2 {
+        font-size: 16px;
+    }
+
+    .hero--info h1 {
+        font-size: 26px;
+    }
+
+    .hero--info p {
+        font-size: 14px;
+        margin: 18px 0;
+    }
+
+    .hero--info .btn,
+    .hero-about .info .btn {
+        padding: 12px 22px;
+        font-size: 14px;
+    }
+
+    .big-text {
+        font-size: 20px;
+    }
+
+    .banner h3,
+    .video-info h2,
+    .row-text h2,
+    .featured-article h2 {
+        font-size: 19px;
+    }
+
+    .features .info .block {
+        width: 100%;
+    }
+
+    .features h3 {
+        font-size: 22px;
+    }
+
+    /* --- Email subscribe block (index) --- */
+    .email .block {
+        padding: 25px 6%;
+    }
+
+    .email .block h4 {
+        font-size: 21px;
+    }
+
+    .email .block input {
+        width: 100%;
+        padding: 16px 15px;
+    }
+
+    .email .block div:last-child {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .email .block button {
+        position: relative;
+        width: 100%;
+        padding: 13px 0;
+    }
+
+    /* --- About --- */
+    .hero-about .info h1 {
+        font-size: 21px;
+    }
+
+    .work h2 {
+        font-size: 20px;
+    }
+
+    .work .blocks .block {
+        padding: 30px 22px;
+    }
+
+    /* --- Contacts --- */
+    .hero-contacts h1 {
+        font-size: 21px;
+    }
+
+    .feedback h2 {
+        font-size: 22px;
+    }
+
+    .feedback form input,
+    .feedback form textarea {
+        width: 100%;
+    }
+
+    .feedback form button {
+        width: 100%;
+        float: none;
+    }
+
+    /* --- Portfolio --- */
+    .stats-info h3 {
+        font-size: 19px;
+    }
+
+    .testimonials h2 {
+        font-size: 22px;
+    }
+
+    /* --- News search --- */
+    .news-search .search-box {
+        width: 100%;
+    }
+
+    .news-side-item {
+        grid-template-columns: 90px 1fr;
+        gap: 12px;
+    }
+
+    .news-side-item img {
+        width: 90px;
+        height: 80px;
+    }
+
+    .news-side-item h3 {
+        font-size: 14px;
+    }
+
+    /* --- Subscribe form button stacking --- */
+    .subscribe-form {
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .subscribe-form input {
+        width: 100%;
+    }
+
+    .subscribe-btn {
+        padding: 12px 0;
+    }
+}

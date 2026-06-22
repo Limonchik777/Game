@@ -1,0 +1,427 @@
+/* --- Секція заголовку та хлібних крихт --- */
+.services-hero {
+    text-align: center;
+    padding: 60px 0 30px 0;
+}
+
+.services-hero .breadcrumbs {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.services-hero .breadcrumbs span {
+    color: #E87D0E;
+}
+
+.services-hero h1 {
+    font-size: 34px;
+    font-weight: 600;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    line-height: 1.4;
+}
+
+.services-hero .subtitle {
+    color: #ccc;
+    font-size: 15px;
+}
+
+/* --- Блок статистики --- */
+.stats {
+    background: #110B07;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px 0;
+    margin-top: 30px;
+    margin-bottom: 80px;
+}
+
+.stats-item {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    justify-content: center;
+}
+
+/* Вертикальна лінія між елементами статистики */
+.stats-item.divider {
+    border-left: 2px solid #2C2420;
+    border-right: 2px solid #2C2420;
+}
+
+.stats-item .icon-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.icon-clients { background-color: #2e1a11; }
+.icon-countries { background-color: #211e11; }
+.icon-projects { background-color: #112117; }
+
+.stats-info h3 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.stats-info p {
+    color: #898989;
+    font-size: 14px;
+}
+
+/* --- Секція з відео трейлером --- */
+.video-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 48%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.video-cover {
+    width: 100%;
+    display: block;
+    height: 320px;
+    object-fit: cover;
+}
+
+.play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: none;
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(250, 144, 33, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.play-btn:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.video-info {
+    width: 46%;
+}
+
+.video-info h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.video-info p {
+    color: #ccc;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.features-list {
+    list-style: none;
+}
+
+.features-list li {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 30px;
+    font-size: 15px;
+}
+
+/* Зелені галочки біля списку */
+.features-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #22C55E;
+    font-weight: bold;
+    border: 1px solid #22C55E;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+}
+
+/* --- Рядки послуг (Зображення + Текст) --- */
+.services-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    margin-bottom: 100px;
+}
+
+.service-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Клас для чергування блоків (щоб картинка була зліва) */
+.service-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.row-text {
+    width: 45%;
+}
+
+.row-text h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.row-text p {
+    color: #ccc;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.read-more-btn {
+    display: inline-block;
+    background: #DC7000;
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+
+.read-more-btn:hover {
+    background: #FA9021;
+}
+
+.row-image {
+    width: 45%;
+}
+
+.row-image img {
+    width: 100%;
+    border-radius: 15px;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+}
+
+/* --- Секція відгуків (Testimonials) --- */
+.testimonials {
+    padding: 80px 0;
+    background: #0B0705;
+}
+
+.testimonials h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.testimonials-subtitle {
+    text-align: center;
+    color: #aaa;
+    max-width: 600px;
+    margin: 0 auto 50px auto;
+}
+
+.reviews-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.review-card {
+    background: #1C140F;
+    border: 1px solid #2C2420;
+    border-radius: 10px;
+    padding: 25px;
+    width: 30%;
+}
+
+/* Підсвітка першої картки як на макеті */
+.review-card:first-child {
+    border-color: #FA9021;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+.card-header h4 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.card-header .location {
+    font-size: 12px;
+    color: #898989;
+}
+
+.rating {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    color: #FA9021;
+    font-size: 14px;
+}
+
+.review-text {
+    font-size: 14px;
+    color: #ddd;
+    line-height: 1.6;
+}
+
+/* Елементи керування відгуками */
+.testimonials-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.dots {
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background: #333;
+    border-radius: 50%;
+}
+
+.dot.active {
+    background: #FA9021;
+    width: 25px;
+    border-radius: 10px;
+}
+
+.arrows {
+    display: flex;
+    gap: 15px;
+}
+
+.arrow-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #1C140F;
+    border: 1px solid #333;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow-btn.active {
+    background: #FA9021;
+    border-color: #FA9021;
+}
+
+/* --- Текстовий блок новин перед футером --- */
+.simple-news {
+    padding: 60px 0 20px 0;
+}
+
+.simple-news h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.simple-news p {
+    color: #ccc;
+}
+
+/* --- Оновлений блок підписки (Stay in the loop) --- */
+.subscribe-box {
+    background: #1C140F;
+    border-radius: 15px;
+    padding: 40px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+    margin-top: 20px;
+}
+
+.subscribe-text {
+    width: 50%;
+}
+
+.subscribe-text h3 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.subscribe-text p {
+    color: #aaa;
+    font-size: 14px;
+}
+
+.subscribe-form {
+    display: flex;
+    width: 45%;
+    background: #fff;
+    border-radius: 8px;
+    padding: 5px;
+    justify-content: space-between;
+}
+
+.subscribe-form input {
+    border: none;
+    outline: none;
+    padding: 15px;
+    width: 70%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+.subscribe-btn {
+    background: #FA9021;
+    color: #fff;
+    border: none;
+    padding: 0 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.subscribe-btn:hover {
+    background: #a02604;
+}
